@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
-type PointerMode = "normal" | "highlight"
+type PointerMode = "normal" | "highlight" | "array"
 
 interface PointerState {
     mode: PointerMode

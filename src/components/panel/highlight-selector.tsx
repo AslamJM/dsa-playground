@@ -33,15 +33,16 @@ export default function HighlightSelector() {
   };
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-2">
       <Toggle pressed={mode === "highlight"} onClick={toggleMode}>
         <HighlighterIcon className="h-6 w-6" />
       </Toggle>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger
           className={cn(
-            "w-[30px] h-[30px] border-[1px] border-slate-700 rounded",
-            `${highlightColor}`
+            "w-[20px] h-[20px] border-[1px] border-slate-700 rounded",
+            `${highlightColor}`,
+            mode !== "normal" && "cursor-none"
           )}
         ></PopoverTrigger>
         <PopoverContent>

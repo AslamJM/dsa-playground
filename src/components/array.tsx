@@ -13,7 +13,7 @@ export default function ArrayComp({ length }: Props) {
   return (
     <div className="flex">
       {boxIndexes.map((index) => (
-        <ArrayBox index={index} />
+        <ArrayBox index={index} key={index} />
       ))}
     </div>
   );
